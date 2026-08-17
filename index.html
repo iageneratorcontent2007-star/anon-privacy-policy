@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Privacy Policy for Anon, an anonymous chat, matchmaking, and voice/video app.">
+  <title>Anon — Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #12101f;
+      --bg-elevated: #18162b;
+      --panel: #1c1933;
+      --line: rgba(255, 255, 255, 0.08);
+      --text: #f4f1ff;
+      --muted: #b7b0d4;
+      --faint: #8b84a8;
+      --accent: #8b6cff;
+      --accent-2: #c4b5fd;
+      --link: #c4b5fd;
+      --card: rgba(255, 255, 255, 0.03);
+      --radius: 18px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top, #2a2460 0%, #16132e 42%, #12101f 100%);
+      color: var(--text);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible, button:focus-visible, summary:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header.site {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: rgba(18, 16, 31, 0.82);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(160deg, #8b6cff, #5b3fd4);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      box-shadow: 0 8px 24px rgba(91, 63, 212, 0.35);
+    }
+
+    .brand-text strong { display: block; font-size: 1.05rem; }
+    .brand-text span { display: block; color: var(--faint); font-size: 0.78rem; }
+
+    .meta-chip {
+      color: var(--muted);
+      font-size: 0.8rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 12px;
+      white-space: nowrap;
+    }
+
+    .hero {
+      padding: 40px 0 24px;
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 68ch;
+      color: var(--muted);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      padding-bottom: 72px;
+    }
+
+    .toc {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 8px 16px 16px;
+    }
+
+    .toc summary {
+      cursor: pointer;
+      font-weight: 600;
+      padding: 10px 0;
+      list-style: none;
+    }
+
+    .toc summary::-webkit-details-marker { display: none; }
+    .toc summary::after {
+      content: "Show sections";
+      display: block;
+      font-weight: 400;
+      color: var(--faint);
+      font-size: 0.82rem;
+      margin-top: 2px;
+    }
+    .toc[open] summary::after { content: "Hide sections"; }
+
+    .toc nav {
+      display: grid;
+      gap: 6px;
+    }
+
+    .toc a {
+      color: var(--muted);
+      font-size: 0.92rem;
+      padding: 6px 8px;
+      border-radius: 8px;
+    }
+
+    .toc a:hover {
+      background: rgba(139, 108, 255, 0.12);
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    main {
+      display: grid;
+      gap: 18px;
+    }
+
+    section.card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px 22px 8px;
+      scroll-margin-top: 88px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      margin: 20px 0 8px;
+      font-size: 1.02rem;
+      color: var(--accent-2);
+    }
+
+    p, li { color: var(--muted); }
+    ul, ol { padding-left: 1.2rem; }
+    li { margin: 0.35rem 0; }
+    strong { color: var(--text); font-weight: 600; }
+
+    footer.site {
+      border-top: 1px solid var(--line);
+      padding: 28px 0 40px;
+      color: var(--faint);
+      font-size: 0.88rem;
+    }
+
+    footer.site .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      justify-content: space-between;
+    }
+
+    @media (min-width: 920px) {
+      .layout {
+        grid-template-columns: 260px minmax(0, 1fr);
+        align-items: start;
+      }
+      .toc {
+        position: sticky;
+        top: 88px;
+        padding: 18px 16px;
+      }
+      .toc summary { pointer-events: none; }
+      .toc summary::after { display: none; }
+      .toc nav { display: grid !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap brand-row">
+      <a class="brand" href="#top">
+        <span class="mark" aria-hidden="true">A</span>
+        <span class="brand-text">
+          <strong>Anon</strong>
+          <span>Privacy Policy</span>
+        </span>
+      </a>
+      <span class="meta-chip">Effective: 17 August 2026</span>
+    </div>
+  </header>
+
+  <div class="wrap hero" id="top">
+    <h1>Anon — Privacy Policy</h1>
+    <p>
+      This Privacy Policy explains how Anon collects, uses, stores, and shares information when you use the Anon
+      application. It is written to match the features that exist in the current product, including Google sign-in,
+      anonymous profiles, text chat, voice and video, matchmaking, translation, coins, VIP, advertising, and safety tools.
+    </p>
+  </div>
+
+  <div class="wrap layout">
+    <details class="toc" open>
+      <summary>On this page</summary>
+      <nav aria-label="Sections">
+        <a href="#introduction">1. Introduction</a>
+        <a href="#collect">2. Information We Collect</a>
+        <a href="#account">3. Account and Profile</a>
+        <a href="#user-id">4. User ID</a>
+        <a href="#messages">5. Messages</a>
+        <a href="#voice">6. Voice and Audio</a>
+        <a href="#video">7. Video and Camera</a>
+        <a href="#microphone">8. Microphone</a>
+        <a href="#location">9. Location / Region</a>
+        <a href="#matchmaking">10. Matchmaking</a>
+        <a href="#translation">11. Translation</a>
+        <a href="#coins">12. Coins</a>
+        <a href="#vip">13. VIP</a>
+        <a href="#purchases">14. Google Play purchases</a>
+        <a href="#ads">15. Advertising</a>
+        <a href="#safety">16. Moderation and Safety</a>
+        <a href="#bots">17. Test / Bot Accounts</a>
+        <a href="#use">18. How We Use Information</a>
+        <a href="#share">19. How We Share Information</a>
+        <a href="#retention">20. Data Retention</a>
+        <a href="#deletion">21. Account and Data Deletion</a>
+        <a href="#security">22. Security</a>
+        <a href="#children">23. Children's Privacy</a>
+        <a href="#international">24. International Users</a>
+        <a href="#changes">25. Changes</a>
+        <a href="#contact">26. Contact</a>
+      </nav>
+    </details>
+
+    <main>
+      <section class="card" id="introduction">
+        <h2>1. Introduction</h2>
+        <p>
+          Anon is an anonymous social chat service. You can create an anonymous profile, find other people through
+          matchmaking, send messages, join rooms, and, where available, use voice or video. Anon is operated using
+          backend services hosted by Supabase and, on Android, Google Play services.
+        </p>
+        <p>
+          “Anon,” “we,” “us,” and “our” refer to the operator of the Anon application. “You” means the person who
+          installs or uses Anon. This policy applies to the Anon mobile application and related clients that connect
+          to the same backend.
+        </p>
+        <p>
+          Anon is designed so that other users see an anonymous name, avatar, and public user ID, not your Google
+          account name. That does not mean Anon collects no personal data. We collect the information described below
+          to operate the service, prevent abuse, process purchases, show ads, and handle safety reports.
+        </p>
+      </section>
+
+      <section class="card" id="collect">
+        <h2>2. Information We Collect</h2>
+        <p>Depending on how you use Anon, we may collect:</p>
+        <ul>
+          <li>Account and authentication data from Google sign-in.</li>
+          <li>Profile data that you choose, such as anonymous name, avatar, gender preference, language, and country or region.</li>
+          <li>Internal and public user identifiers.</li>
+          <li>Messages, room activity, friend or heart actions, and related chat metadata.</li>
+          <li>Media files that you choose to upload.</li>
+          <li>Voice and video connection data needed to start and maintain a call.</li>
+          <li>Approximate or precise location if you grant location permission.</li>
+          <li>Matchmaking queue data, selected mode, and region-matching preferences.</li>
+          <li>Translations of messages that you request or that the service generates for a conversation.</li>
+          <li>Coin balances, purchases, VIP entitlements, and related transaction records.</li>
+          <li>Advertising identifiers and ad-performance data when ads are shown.</li>
+          <li>Reports, blocks, permission states, and moderation records.</li>
+          <li>Security signals such as a hashed app-install identifier, a coarse device label, and a hashed IP address.</li>
+          <li>Technical logs needed to operate, debug, and secure the service.</li>
+        </ul>
+        <p>
+          We do not ask for your Google password. We do not use IMEI, MAC addresses, or hardware fingerprints as
+          account identifiers.
+        </p>
+      </section>
+
+      <section class="card" id="account">
+        <h2>3. Account and Profile Information</h2>
+        <p>
+          You can sign in with Google. Anon requests the Google OAuth scopes <strong>openid</strong>,
+          <strong>email</strong>, and <strong>profile</strong>. Google may provide us with your Google account
+          identifier, email address, and basic profile information. Anon uses this to create or recover one Anon
+          account for that Google identity.
+        </p>
+        <p>
+          Your public profile in Anon is separate from your Google identity. Other users typically see an anonymous
+          name, avatar, online status, and public user ID. They do not see your email address in the normal chat or
+          matchmaking interface.
+        </p>
+        <p>We may store profile fields that you set, including:</p>
+        <ul>
+          <li>Anonymous display name and avatar.</li>
+          <li>Gender and “looking for” preferences used for matching.</li>
+          <li>Preferred language.</li>
+          <li>Country or region code used for regional matchmaking.</li>
+          <li>Account status, such as active, restricted, or banned.</li>
+        </ul>
+        <p>
+          Authorized administrators may access private identity fields such as email for support, safety, and
+          account administration. Those views are audited.
+        </p>
+      </section>
+
+      <section class="card" id="user-id">
+        <h2>4. User ID</h2>
+        <p>Anon uses more than one identifier:</p>
+        <ul>
+          <li><strong>Authentication user ID.</strong> A unique account ID created when you sign in. This ID is used by the backend to attach your profile, chats, purchases, and permissions to the correct account.</li>
+          <li><strong>Public user ID.</strong> A visible identifier in the form of a short public code, such as an <strong>ANON-</strong> ID. You and other users, and administrators, can use this ID to recognize an account without sharing your email.</li>
+          <li><strong>Google subject / provider ID.</strong> Used so that one Google identity maps to one Anon account.</li>
+        </ul>
+        <p>
+          The public ID is part of your in-app identity. The authentication ID and Google identity are not shown to
+          other regular users as a Google email or Google account name.
+        </p>
+      </section>
+
+      <section class="card" id="messages">
+        <h2>5. Messages and Communications</h2>
+        <p>
+          When you send a text message in a conversation or room, Anon stores the message content and related
+          metadata on our backend. This typically includes the sender, conversation or room, timestamp, and message
+          text.
+        </p>
+        <p>
+          If you upload an image or other file, we store the file in application storage and keep metadata such as
+          owner, storage path, type, size, and the related conversation or room.
+        </p>
+        <p>
+          Temporary match chats, private chats after a friend connection, and room messages are communications on
+          the service. We do not claim that messages are never stored. Stored messages may be used to deliver the
+          chat, show history, generate translations, and review safety reports.
+        </p>
+        <p>
+          Other participants in a conversation or room can see the content you send them. Authorized administrators
+          may review messages when needed for moderation, abuse investigation, or legal compliance. Those reviews
+          can be logged.
+        </p>
+      </section>
+
+      <section class="card" id="voice">
+        <h2>6. Voice and Audio</h2>
+        <p>
+          Voice chat and voice matchmaking use the device microphone and WebRTC to send audio between participants.
+          To connect the call, Anon exchanges signaling data through our backend and may use a STUN service,
+          including Google’s public STUN servers, to help devices find a network path.
+        </p>
+        <p>
+          Anon is not operated as a call-recording product. The live audio stream is used to provide the call.
+          We still process signaling, session, matchmaking, permission, and safety data related to the voice
+          session. Network providers and STUN services may process technical connection data.
+        </p>
+        <p>
+          Voice features may require an active VIP entitlement. The entitlement check is performed by our servers,
+          not only on the device.
+        </p>
+      </section>
+
+      <section class="card" id="video">
+        <h2>7. Video and Camera</h2>
+        <p>
+          Video chat and video matchmaking use the camera and microphone. Anon accesses the camera only after the
+          relevant permission is granted and you start a video feature. You can turn the camera off during a call
+          in the call controls.
+        </p>
+        <p>
+          Video is transmitted with WebRTC in the same way as voice. We do not claim that video never leaves your
+          device: it is sent to the other participant so the call can work. Signaling and session records are
+          processed on our backend. Authorized administrators may review related session or report information.
+        </p>
+        <p>Video features may also require an active VIP entitlement, which is checked on the server.</p>
+      </section>
+
+      <section class="card" id="microphone">
+        <h2>8. Microphone Permissions</h2>
+        <p>
+          Anon requests microphone permission when you use voice or video. On Android this corresponds to the
+          microphone / record-audio permission. The app uses the microphone to capture audio for the active call
+          or voice session.
+        </p>
+        <p>
+          If you deny microphone permission, voice and video features that need audio will not work normally.
+          You can change the permission later in the device settings or in the in-app privacy/permissions screen.
+        </p>
+        <p>
+          Anon may also request related permissions when you use the corresponding feature: camera for video,
+          photos for uploads, notifications for alerts, and location for location features.
+        </p>
+      </section>
+
+      <section class="card" id="location">
+        <h2>9. Location / Region Information</h2>
+        <h3>Region or country you select</h3>
+        <p>
+          You may set a country or region code on your profile. Anon uses this for regional matchmaking and related
+          eligibility checks. This is profile information that you choose. It is not the same as GPS location.
+        </p>
+        <h3>Device location</h3>
+        <p>
+          If you grant location permission, Anon may read your device location and submit latitude, longitude, and
+          accuracy to our backend. Location is used for location-based features and may be reviewed by authorized
+          administrators for safety or support. Location is not required to create an account.
+        </p>
+        <p>
+          We do not treat location as a public profile field shown to every other user. Granting location is
+          optional. You can refuse or later revoke the permission.
+        </p>
+      </section>
+
+      <section class="card" id="matchmaking">
+        <h2>10. Matchmaking</h2>
+        <p>
+          When you search for someone, Anon places you in a matchmaking queue. We process the selected mode
+          (text, voice, or video), your profile preferences, online status, and, if you choose regional matching,
+          your country or region code.
+        </p>
+        <p>
+          A successful match creates a conversation or session between you and another account. We store the
+          match/session records needed to connect you, apply coin or VIP rules, and keep the chat or call working.
+        </p>
+        <p>
+          Regional matching and voice/video matching may require VIP or other existing eligibility rules. Those
+          checks are enforced on the server.
+        </p>
+      </section>
+
+      <section class="card" id="translation">
+        <h2>11. Automatic Translation</h2>
+        <p>
+          Anon can translate chat messages into a target language, using your preferred language where available.
+          To do this, message text is sent from the app to our server-side translation service.
+        </p>
+        <p>
+          The translation service may then send that text to a third-party translation provider. Depending on
+          server configuration, this may include Google Cloud Translation or another translation API. The provider
+          returns a translated text and may detect a source language. Anon may store the translation so it does not
+          have to be requested again for the same message and language.
+        </p>
+        <p>
+          Do not send information in chat that you are not willing to have processed for delivery, storage,
+          moderation, or translation.
+        </p>
+      </section>
+
+      <section class="card" id="coins">
+        <h2>12. Coins and Virtual Currency</h2>
+        <p>
+          Anon uses a virtual currency called Coins. Coins can be received through existing in-app actions such as
+          purchases, rewarded ads, daily bonuses, or administrator adjustments. Coins can be spent on existing
+          features such as certain matchmaking or room actions, according to the current economy rules.
+        </p>
+        <p>
+          We store your coin balance and a history of economy transactions. Coins are a limited license to use
+          in-app features. They are not real-world money, and they have no cash value except where a store or
+          applicable law requires otherwise.
+        </p>
+      </section>
+
+      <section class="card" id="vip">
+        <h2>13. VIP</h2>
+        <p>
+          VIP is a time-limited entitlement. It can be activated when you complete an eligible Google Play
+          purchase, or when an authorized administrator grants VIP. The backend stores VIP status and an expiration
+          time.
+        </p>
+        <p>
+          While VIP is active, existing VIP features such as voice and video access and regional matching are
+          available according to the current product rules. When VIP expires or is revoked, those features are
+          limited again.
+        </p>
+        <p>
+          We store entitlement records so the app and the server can check whether VIP is currently active. We do
+          not treat an old purchase by itself as proof that VIP is still active after it has expired.
+        </p>
+      </section>
+
+      <section class="card" id="purchases">
+        <h2>14. Google Play purchases</h2>
+        <p>
+          On Android, coin packs and VIP subscriptions are sold through Google Play Billing. Google processes the
+          payment. Anon receives purchase confirmation data needed to credit coins or activate VIP, such as a
+          product identifier and a purchase token. We store purchase and entitlement records to fulfill the order
+          and prevent duplicate credit.
+        </p>
+        <p>
+          Google may collect payment method details, purchase history, and account information under Google’s own
+          policies. Anon does not receive your full payment-card number through the app.
+        </p>
+        <p>
+          Refunds, billing disputes, and subscription cancellation for Play purchases are handled under Google Play
+          policies and any applicable consumer law.
+        </p>
+      </section>
+
+      <section class="card" id="ads">
+        <h2>15. Advertising</h2>
+        <p>
+          Anon uses Google AdMob to show advertising, including banner ads and rewarded ads. Rewarded ads may grant
+          Coins after the ad is completed and verified. Coin credit for rewarded ads is confirmed on the server
+          after AdMob server-side verification, not by a coin amount typed on the device.
+        </p>
+        <p>
+          AdMob and Google may collect device and advertising identifiers, approximate location derived by Google,
+          IP address, interaction data, and similar technical information to deliver, measure, and combat fraud in
+          ads. This processing is also governed by Google’s privacy policy and ad settings.
+        </p>
+        <p>
+          You may be able to reset or limit advertising identifiers in your device settings. Doing so can affect
+          ad personalization; it does not remove the need for ads or for the technical data required to show them.
+        </p>
+      </section>
+
+      <section class="card" id="safety">
+        <h2>16. Moderation, Reports and Safety</h2>
+        <p>
+          You can block another user and submit a report with a reason and, where relevant, the related
+          conversation. We store blocks and reports so we can hide or limit contact and review possible abuse.
+        </p>
+        <p>
+          Authorized administrators can review accounts, messages, uploaded media metadata, location records,
+          economy data, and reports. They may restrict, ban, or otherwise act on an account. Admin actions and
+          sensitive views can be written to audit logs.
+        </p>
+        <p>
+          We may also keep security events, rate-limit records, and risk signals to reduce spam, multi-accounting,
+          and attacks. Hashed IP addresses and hashed install identifiers are used for these safety purposes. A
+          hashed IP is not shown on your public profile and is not used as a permanent account lock by itself.
+        </p>
+      </section>
+
+      <section class="card" id="bots">
+        <h2>17. Test / Bot Accounts</h2>
+        <p>
+          Anon includes test or bot accounts in the production codebase. These accounts are used for quality
+          testing, development, and administrator verification of matchmaking, chat, and call flows. They are
+          marked as test-bot accounts in our systems and are not ordinary user accounts.
+        </p>
+        <p>
+          Regular matchmaking is designed to pair real users with other real users. Test bots are used when that
+          testing feature is enabled by administrators. If you are matched with a test account during testing, the
+          conversation is still processed as chat or call data on our systems.
+        </p>
+        <p>
+          Test-bot accounts are not a substitute for human moderation and are not used to collect extra personal
+          data beyond the session needed to test the product.
+        </p>
+      </section>
+
+      <section class="card" id="use">
+        <h2>18. How We Use Information</h2>
+        <p>We use the information described in this policy to:</p>
+        <ul>
+          <li>Create and maintain your account and anonymous profile.</li>
+          <li>Sign you in with Google and keep one Google identity linked to one Anon account.</li>
+          <li>Operate matchmaking, chats, rooms, friends, and voice or video sessions.</li>
+          <li>Translate messages when that feature is used.</li>
+          <li>Apply coin, VIP, and purchase rules.</li>
+          <li>Show ads and grant verified ad rewards.</li>
+          <li>Provide customer support and administrator tools.</li>
+          <li>Detect, investigate, and prevent fraud, spam, abuse, and security incidents.</li>
+          <li>Comply with law, enforce our terms, and protect users and the service.</li>
+          <li>Improve reliability and understand how features are used, using operational metrics rather than selling a browse history of your chats.</li>
+        </ul>
+      </section>
+
+      <section class="card" id="share">
+        <h2>19. How We Share Information</h2>
+        <p>We do not sell your chat contents as a data product. We do share information in these cases:</p>
+        <ul>
+          <li><strong>Other users.</strong> People you match with, chat with, or join in a room can see your public profile and the content you send them.</li>
+          <li><strong>Service providers.</strong> We use companies that process data on our behalf or as independent controllers for their services, including:
+            <ul>
+              <li>Supabase, for authentication, database, file storage, realtime features, and server functions.</li>
+              <li>Google, for sign-in, Play Billing, AdMob, STUN connectivity, and, when configured, Cloud Translation.</li>
+              <li>Other translation APIs if they are configured on the translation service.</li>
+            </ul>
+          </li>
+          <li><strong>Administrators.</strong> Authorized operators may access account and safety data to run the service.</li>
+          <li><strong>Legal and safety.</strong> We may disclose information if we believe it is reasonably necessary to comply with law, legal process, or to protect users, the public, or Anon.</li>
+          <li><strong>Business changes.</strong> If the service is transferred, relevant data may be transferred with it, subject to this policy or a successor notice.</li>
+        </ul>
+        <p>
+          Those third parties process information under their own privacy policies as well as any agreement they
+          have with us. You can read Google’s policy at
+          <a href="https://policies.google.com/privacy" rel="noopener noreferrer">policies.google.com/privacy</a>
+          and Supabase’s policy at
+          <a href="https://supabase.com/privacy" rel="noopener noreferrer">supabase.com/privacy</a>.
+        </p>
+      </section>
+
+      <section class="card" id="retention">
+        <h2>20. Data Retention</h2>
+        <p>We keep information for as long as needed to provide Anon and for the purposes in this policy.</p>
+        <ul>
+          <li>Account, profile, public ID, and linked Google identity: while the account exists.</li>
+          <li>Messages, media metadata, translations, friends, blocks, and match/session records: while needed to operate chats and rooms, and longer if required for safety, disputes, or law.</li>
+          <li>Location records: until deleted with the account or removed in the course of normal operations.</li>
+          <li>Coin, purchase, and VIP records: while needed to fulfill purchases, prevent fraud, and keep entitlements accurate.</li>
+          <li>Reports, bans, and admin audit logs: while needed for safety and operational review.</li>
+          <li>Hashed IP addresses, hashed install identifiers, and routine security events: generally about 30 days, then purged by the security-retention process, unless a longer period is needed for an investigation.</li>
+        </ul>
+        <p>
+          Google, AdMob, and other providers may retain their own logs under their policies, which we do not
+          control.
+        </p>
+      </section>
+
+      <section class="card" id="deletion">
+        <h2>21. Account and Data Deletion</h2>
+        <p>
+          You can delete your Anon account from the in-app privacy screen. Deletion calls our server to remove
+          associated application data such as your profile, private identity record, stored location, uploaded-media
+          records, and permission-state records, and then signs you out.
+        </p>
+        <p>
+          Some information may remain where we must keep it, including residual security, purchase, report, or
+          audit records, backups for a limited time, or data that another user still holds (for example, a message
+          you already sent that remains in their conversation history until that data is separately removed).
+        </p>
+        <p>
+          Deleting the Anon account does not automatically delete your Google account. Play purchase history remains
+          with Google. You can also contact us at
+          <a href="mailto:nikoparravicini34@gmail.com">nikoparravicini34@gmail.com</a>
+          to request help with account or data deletion.
+        </p>
+      </section>
+
+      <section class="card" id="security">
+        <h2>22. Security</h2>
+        <p>
+          We use technical and organizational measures appropriate to the nature of the service. These include
+          encrypted transport (HTTPS), authenticated API access, server-side authorization for admin and entitlement
+          actions, and access controls on application data. Sensitive administrator actions can be audited.
+        </p>
+        <p>
+          No method of transmission or storage is completely secure. You should not share information in Anon that
+          you cannot afford to have seen by another participant or, in a safety investigation, by an administrator.
+        </p>
+        <p>
+          Anon does not store your Google password. Do not send passwords, backup codes, or payment-card numbers
+          in chat.
+        </p>
+      </section>
+
+      <section class="card" id="children">
+        <h2>23. Children's Privacy</h2>
+        <p>
+          Anon is not directed to children under 13, and we do not knowingly collect personal information from
+          children under 13. You must also be old enough to use Google and this app in your country.
+        </p>
+        <p>
+          If you believe a child under 13 has created an Anon account, contact
+          <a href="mailto:nikoparravicini34@gmail.com">nikoparravicini34@gmail.com</a>.
+          We will take reasonable steps to delete the account and related information.
+        </p>
+      </section>
+
+      <section class="card" id="international">
+        <h2>24. International Users</h2>
+        <p>
+          Anon may be used from different countries. Our service providers, including Supabase and Google, may
+          process information in the United States and other countries where they operate. Those countries may have
+          data-protection laws that differ from the laws in your country.
+        </p>
+        <p>
+          By using Anon, you understand that your information may be transferred to and processed in those
+          locations as needed to provide the service.
+        </p>
+      </section>
+
+      <section class="card" id="changes">
+        <h2>25. Changes to This Privacy Policy</h2>
+        <p>
+          We may update this Privacy Policy when the product, providers, or legal requirements change. The
+          effective date at the top of this page will be updated when we publish a change.
+        </p>
+        <p>
+          If a change is material, we will take reasonable steps to provide notice, for example by updating this
+          page, noting the change in the app listing, or showing a notice in the app. The current version of this
+          page is the policy that applies.
+        </p>
+      </section>
+
+      <section class="card" id="contact">
+        <h2>26. Contact Information</h2>
+        <p>
+          For privacy questions, access requests, or deletion help, contact:
+        </p>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:nikoparravicini34@gmail.com">nikoparravicini34@gmail.com</a>
+        </p>
+        <p>
+          This is the contact for Anon privacy inquiries. For Google account, Play Billing, or AdMob questions that
+          only Google can resolve, please also use Google’s own support channels.
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site">
+    <div class="wrap">
+      <span>© 2026 Anon. All rights reserved.</span>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+</body>
+</html>
