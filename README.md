@@ -11,6 +11,7 @@ Replace `YOUR_GITHUB_USERNAME` with your GitHub username. Use that URL in Google
 ## Files
 
 - `index.html` — the Privacy Policy page
+- `delete-account.html` — account deletion instructions for Google Play
 - `.nojekyll` — tells GitHub Pages not to process the site with Jekyll
 
 ## Publish
