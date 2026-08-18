@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Anon Child Safety Standards">
+  <title>Anon - Child Safety Standards</title>
+  <style>
+    :root {
+      --bg: #12101f;
+      --bg-elevated: #18162b;
+      --panel: #1c1933;
+      --line: rgba(255, 255, 255, 0.08);
+      --text: #f4f1ff;
+      --muted: #b7b0d4;
+      --faint: #8b84a8;
+      --accent: #8b6cff;
+      --accent-2: #c4b5fd;
+      --link: #c4b5fd;
+      --card: rgba(255, 255, 255, 0.03);
+      --danger: #ff8aa1;
+      --radius: 18px;
+      --max: 980px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top, #2a2460 0%, #16132e 42%, #12101f 100%);
+      color: var(--text);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header.site {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(16px);
+      background: rgba(18, 16, 31, 0.82);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: inherit;
+    }
+
+    .mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(160deg, #8b6cff, #5b3fd4);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      box-shadow: 0 8px 24px rgba(91, 63, 212, 0.35);
+    }
+
+    .brand-text strong { display: block; font-size: 1.05rem; }
+    .brand-text span { display: block; color: var(--faint); font-size: 0.78rem; }
+
+    .meta-chip {
+      color: var(--muted);
+      font-size: 0.8rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 12px;
+      white-space: nowrap;
+    }
+
+    main {
+      padding: 40px 0 72px;
+    }
+
+    .hero,
+    .section,
+    .callout {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+    }
+
+    .hero {
+      margin-bottom: 24px;
+      background: linear-gradient(180deg, rgba(139, 108, 255, 0.13), rgba(255, 255, 255, 0.03));
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(1.9rem, 4vw, 2.7rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p,
+    .section p,
+    .section li,
+    .callout p {
+      color: var(--muted);
+    }
+
+    .callout {
+      border-color: rgba(255, 138, 161, 0.28);
+      background: linear-gradient(180deg, rgba(255, 138, 161, 0.08), rgba(255, 255, 255, 0.02));
+      margin-bottom: 24px;
+    }
+
+    .callout strong {
+      color: var(--danger);
+    }
+
+    .grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .section h2 {
+      margin: 0 0 12px;
+      font-size: 1.25rem;
+    }
+
+    ul {
+      margin: 12px 0 0;
+      padding-left: 20px;
+    }
+
+    li + li {
+      margin-top: 10px;
+    }
+
+    .footer-links {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      color: var(--faint);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      padding: 24px 0 40px;
+      color: var(--faint);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 720px) {
+      .brand-row {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap brand-row">
+      <div class="brand" aria-label="Anon">
+        <div class="mark" aria-hidden="true">A</div>
+        <div class="brand-text">
+          <strong>Anon</strong>
+          <span>Child Safety Standards</span>
+        </div>
+      </div>
+      <div class="meta-chip">Last updated: August 18, 2026</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Anon Child Safety Standards</h1>
+      <p>
+        Anon does not allow child sexual abuse and exploitation in any form. We prohibit content, behavior,
+        and attempts to use the app to harm, sexualize, exploit, or endanger minors.
+      </p>
+    </section>
+
+    <section class="callout">
+      <p>
+        <strong>Zero tolerance:</strong> Anon strictly prohibits child sexual abuse and exploitation (CSAE),
+        child sexual abuse material (CSAM), sexual content involving minors, sexual exploitation or grooming
+        of minors, and any attempt to establish sexual contact with a minor.
+      </p>
+    </section>
+
+    <div class="grid">
+      <section class="section">
+        <h2>Prohibited Content and Conduct</h2>
+        <ul>
+          <li>Any child sexual abuse material (CSAM), including uploads, links, requests, or distribution.</li>
+          <li>Any sexual content involving minors, whether real, solicited, described, promoted, or shared.</li>
+          <li>Sexual exploitation of minors, including coercion, manipulation, extortion, or abuse.</li>
+          <li>Grooming behavior or any attempt to build contact with a minor for sexual purposes.</li>
+          <li>Attempts to arrange, encourage, or initiate sexual contact with a minor on or off the platform.</li>
+          <li>Using Anon to facilitate illegal sexual activity involving minors in any jurisdiction.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Reporting in the App</h2>
+        <p>
+          Users can report violations directly in the Anon app. Reports help us review suspected abuse,
+          dangerous behavior, or other content that may violate these standards.
+        </p>
+        <p>
+          We review complaints and, when appropriate, take action based on the information available to us
+          and our applicable legal obligations.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Enforcement</h2>
+        <p>When we determine that content or conduct violates these standards, we may take measures such as:</p>
+        <ul>
+          <li>Removing prohibited content.</li>
+          <li>Blocking or restricting accounts involved in the violation.</li>
+          <li>Disabling access to features where necessary to protect users.</li>
+          <li>Preserving relevant information when required for safety review or legal compliance.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Cooperation With Law Enforcement</h2>
+        <p>
+          Where required or appropriate under applicable law, Anon may cooperate with law enforcement or other
+          competent authorities in relation to child safety, child sexual abuse and exploitation, or other
+          unlawful conduct involving minors.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Contact</h2>
+        <p>
+          For child safety questions or reports related to these standards, contact:
+          <a href="mailto:nikoparravicini34@gmail.com">nikoparravicini34@gmail.com</a>
+        </p>
+        <p>
+          See also the
+          <a href="https://iageneratorcontent2007-star.github.io/anon-privacy-policy/">Anon Privacy Policy</a>.
+        </p>
+      </section>
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html">Privacy Policy</a>
+      <a href="delete-account.html">Delete Account</a>
+      <a href="https://iageneratorcontent2007-star.github.io/anon-privacy-policy/">Public Privacy Policy URL</a>
+    </div>
+  </main>
+
+  <footer class="wrap">
+    This page applies to the Anon app and is intended to describe the platform's public child safety standards.
+  </footer>
+</body>
+</html>
